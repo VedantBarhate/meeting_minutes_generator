@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Minutes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Generated Meeting Minutes</h1>
+        <div class="minutes">
+            {{ minutes }}
+        </div>
+        <a href="{{ url_for('index') }}" class="back-btn">Generate Another</a>
+    </div>
+</body>
+</html>

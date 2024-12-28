@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Minutes Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Meeting Minutes Generator</h1>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <label for="transcript_file">Upload your meeting transcript (.txt):</label>
+            <input type="file" name="transcript_file" id="transcript_file" accept=".txt" required>
+            <button type="submit">Generate Meeting Minutes</button>
+        </form>
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
